@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "fishybusiness",
+  "version": "${version}",
+
+  "name": "Fishy Business",
+  "description": "This mod aims to help new BTA modders.",
+  "authors": [
+    "Turnip Labs"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+	"icon": "icon.png",
+  "license": "CC0-1.0",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "glp.fishybusiness.FishyBusiness"
+    ],
+		"beforeGameStart": [
+          "glp.fishybusiness.FishyBusiness"
+		],
+		"afterGameStart": [
+          "glp.fishybusiness.FishyBusiness"
+		],
+		"recipesReady": [
+          "glp.fishybusiness.FishyBusiness"
+		]
+	},
+  "mixins": [
+      "examplemod.mixins.json"
+  ],
+
+  "depends": {
+		"minecraft": "^7.2-beta",
+    "fabricloader": ">=0.15.5"
+  },
+  "suggests": {
+  }
+}
