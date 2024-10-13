@@ -1,11 +1,7 @@
 package glp.fishybusiness.items;
 
 import glp.fishybusiness.items.ItemDaggerfish;
-import net.minecraft.core.item.Item;
-import net.minecraft.core.item.ItemArmor;
-import net.minecraft.core.item.ItemFood;
-import net.minecraft.core.item.ItemPebble;
-import net.minecraft.core.item.ItemEgg;
+import net.minecraft.core.item.*;
 import net.minecraft.core.item.material.ArmorMaterial;
 import turniplabs.halplibe.helper.ArmorHelper;
 import turniplabs.halplibe.helper.CreativeHelper;
@@ -18,18 +14,28 @@ import static glp.fishybusiness.FishyBusiness.MOD_ID;
 public class ModItems {
 	public static int itemId = 1000;
 
-	public static ItemFood rawSalmon;
+	public static Item lavaproofString;
+	public static ItemFood salmon;
+	public static ItemFood seaweed;
 	public static ItemDaggerfish daggerfish;
 
 	public void initializeItems() {
 
-		rawSalmon = new ItemBuilder(MOD_ID)
+		lavaproofString = new ItemBuilder(MOD_ID)
+			.setIcon("fishybusiness:item/lavaproof_string")
+			.build(new Item("lavaproofString", itemId++));
+
+		salmon = new ItemBuilder(MOD_ID)
 			.setIcon("fishybusiness:item/salmon")
-			.build(new ItemFood("salmon", itemId++, 2, 20, false, 4));
+			.build(new ItemFood("salmon", itemId++, 2, 10, true, 8));
 
 		daggerfish = new ItemBuilder(MOD_ID)
 			.setIcon("fishybusiness:item/daggerfish")
 			.build(new ItemDaggerfish("daggerfish", itemId++));
+
+		seaweed = new ItemBuilder(MOD_ID)
+			.setIcon("fishybusiness:item/seaweed")
+			.build(new ItemFood("seaweed", itemId++, 1, 10, false, 8));
 	}
 
 }

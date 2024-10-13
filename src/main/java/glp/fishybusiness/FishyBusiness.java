@@ -1,5 +1,6 @@
 package glp.fishybusiness;
 
+import glp.fishybusiness.blocks.ModBlocks;
 import glp.fishybusiness.items.ModItems;
 import glp.fishybusiness.entities.ModEntities;
 import net.fabricmc.api.ModInitializer;
@@ -19,6 +20,7 @@ public class FishyBusiness implements ModInitializer, GameStartEntrypoint, Recip
 		LOGGER.info("FishyBusiness initialized.");
 		new ModItems().initializeItems();
 		new ModEntities().initializeEntities();
+		new ModBlocks().initializeBlocks();
 	}
 
 	@Override

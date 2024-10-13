@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "glp.fishybusiness.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "BiomeNetherMixin",
+    "EntityBobberMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
