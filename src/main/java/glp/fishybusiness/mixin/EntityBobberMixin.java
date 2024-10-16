@@ -471,8 +471,6 @@ public abstract class EntityBobberMixin extends Entity {
 			drop = ModItems.seaweed;
 		} else if (chance == 1) {
 			drop = ModItems.daggerfish;
-		} else if (chance == 2) {
-			drop = ModItems.salmon;
 		} else if (chance == 3) {
 			drop = Item.stick;
 		}

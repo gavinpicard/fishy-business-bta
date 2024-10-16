@@ -3,6 +3,7 @@ package glp.fishybusiness;
 import glp.fishybusiness.blocks.ModBlocks;
 import glp.fishybusiness.items.ModItems;
 import glp.fishybusiness.entities.ModEntities;
+import glp.fishybusiness.ModRecipes;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemStack;
@@ -29,7 +30,7 @@ public class FishyBusiness implements ModInitializer, GameStartEntrypoint, Recip
 
 	@Override
 	public void afterGameStart() {
-
+		new ModRecipes().initializeRecipes();
 	}
 
 	@Override

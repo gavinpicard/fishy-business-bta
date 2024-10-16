@@ -15,9 +15,11 @@ public class ModItems {
 	public static int itemId = 1000;
 
 	public static Item lavaproofString;
-	public static ItemFood salmon;
+	public static Item steelRod;
+	public static Item lavaFish;
 	public static ItemFood seaweed;
 	public static ItemDaggerfish daggerfish;
+	public static ItemFishingRod steelFishingRod;
 
 	public void initializeItems() {
 
@@ -25,17 +27,24 @@ public class ModItems {
 			.setIcon("fishybusiness:item/lavaproof_string")
 			.build(new Item("lavaproofString", itemId++));
 
-		salmon = new ItemBuilder(MOD_ID)
-			.setIcon("fishybusiness:item/salmon")
-			.build(new ItemFood("salmon", itemId++, 2, 10, true, 8));
+		steelRod = new ItemBuilder(MOD_ID)
+			.setIcon("fishybusiness:item/steel_rod")
+			.build(new Item("steelRod", itemId++));
+
+		steelFishingRod = new ItemBuilder(MOD_ID)
+			.setIcon("fishybusiness:item/steel_fishing_rod")
+			.build(new ItemFishingRod("steelFishingRod", itemId++));
 
 		daggerfish = new ItemBuilder(MOD_ID)
 			.setIcon("fishybusiness:item/daggerfish")
 			.build(new ItemDaggerfish("daggerfish", itemId++));
 
+		lavaFish = new ItemBuilder(MOD_ID)
+			.setIcon("fishybusiness:item/lavaFish")
+			.build(new Item("lavaFish", itemId++));
+
 		seaweed = new ItemBuilder(MOD_ID)
 			.setIcon("fishybusiness:item/seaweed")
 			.build(new ItemFood("seaweed", itemId++, 1, 10, false, 8));
 	}
-
 }
